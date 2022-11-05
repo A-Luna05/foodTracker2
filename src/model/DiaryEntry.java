@@ -18,7 +18,7 @@ public class DiaryEntry {
 	public Date getDay(String date) {
 		return Day;
 	}
-	
+	//new entry
 	public DiaryEntry() {
 		this.Breakfast = new Meal(0,new ArrayList<Food>());
 		this.Lunch = new Meal(0,new ArrayList<Food>());
@@ -26,6 +26,8 @@ public class DiaryEntry {
 		this.snack = new Meal(0,new ArrayList<Food>());
 		this.Day = new java.util.Date();
 	}
+	
+
 	//1 = Breakfast, 2 = Lunch, 3 = Dinner, 4 = Snack
 	public void update(int meal, Food fooditem) {
 		if(meal == 1){
@@ -79,4 +81,5 @@ public class DiaryEntry {
 		outfile.append(Day + "," + finalTotals.get(0)+ ',' + finalTotals.get(1)+ ',' + finalTotals.get(2)+ ',' + finalTotals.get(3) + "\n");
 		outfile.close();
 	}
+	
 }

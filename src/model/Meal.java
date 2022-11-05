@@ -47,6 +47,9 @@ public class Meal {
 		return mealTotals;
 	}
 	
+	public List<Food> getList() {
+		return this.foodList;
+	}
 	
 	public void addFood(Food food) 
 		{this.foodList.add(food);}
