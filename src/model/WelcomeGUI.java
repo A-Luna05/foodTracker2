@@ -14,7 +14,7 @@ public class WelcomeGUI {
 	public WelcomeGUI() {
 
 		// Creates welcomeText Object
-		welcomeText.setBounds(150, 40, 450, 100);
+		welcomeText.setBounds(150, 40, 600, 100);
 		welcomeText.setFont(new Font("Serif", Font.PLAIN, 30));
 
 		// Creates Textbox to enter User's Name

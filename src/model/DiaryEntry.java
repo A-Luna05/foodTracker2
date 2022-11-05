@@ -76,9 +76,11 @@ public class DiaryEntry {
 		for(int i = 0; i < 4; i++) {
 			finalTotals.add(breakfastTotals.get(i) + lunchTotals.get(i) + dinnerTotals.get(i) + snackTotals.get(i));
 		}
-		System.out.print(Day + "," + finalTotals.get(0)+ ',' + finalTotals.get(1)+ ',' + finalTotals.get(2)+ ',' + finalTotals.get(3) + "\n");
+		System.out.print(Day + "," + finalTotals.get(0)+ ',' + finalTotals.get(1)+ ',' + 
+				finalTotals.get(2)+ ',' + finalTotals.get(3) + this.waterQty + "\n");
 
-		outfile.append(Day + "," + finalTotals.get(0)+ ',' + finalTotals.get(1)+ ',' + finalTotals.get(2)+ ',' + finalTotals.get(3) + "\n");
+		outfile.append(Day + "," + finalTotals.get(0)+ ',' + finalTotals.get(1)+ ',' +
+				finalTotals.get(2)+ ',' + finalTotals.get(3) + this.waterQty + "\n");
 		outfile.close();
 	}
 	
