@@ -23,7 +23,6 @@ public class entrySummary {
 		return "On" + this.day + "you have taken" + this.cals + "calories" + this.carbs + "carbohydrates"
 	+ this.protein + "grams of protein" + this.fats + "grams of fat and" + this.water + "ounces of water";
 	}
-	System.out.print('hello');
 }
 
 
