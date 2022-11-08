@@ -14,12 +14,41 @@ import java.time.*;
 
 public class Diary {
 	Map<String,String[] > entries2;
+	int calGoal;
+	int carbGoal;
+	int fatGoal;
+	int proGoal;
+	int waterGoal;
 	
-	public Diary() throws IOException {
+	public Diary(int calGoal, int carbGoal, int fatGoal, int proGoal, int waterGoal) throws IOException {
 		
+		this.calGoal = calGoal;
+		this.carbGoal = carbGoal;
+		this.fatGoal = fatGoal;
+		this.proGoal = proGoal;
+		this.waterGoal = waterGoal;
 		entries2 = new TreeMap<String, String[]>();
 		this.readValues();
+		
 	}
+	
+	public void checkGoals(String day) {
+		 String[] totals = entries2.get(day);
+		 String[] types = {"calories","carbs", "fats", "proteins", "water"};
+		 
+		 int goalTotals[] = {this.calGoal,this.carbGoal,this.fatGoal,this.proGoal,this.waterGoal};
+		 for(int i = 0; i< 5; i++) {
+			 if(Integer.parseInt(totals[i]) > goalTotals[i]) {
+				 System.out.println("you're above your target for " + types[i] );
+			 } else if(Integer.parseInt(totals[i]) < goalTotals[i]) {
+				 System.out.println("you're under your target for " + types[i]);
+			 }  else {
+				 System.out.println("you're at your target for " + types[i]);
+			 }
+			 
+		 }
+	}
+	
 	private void readValues() throws IOException {
 		String line = "";
 		try (BufferedReader br = new BufferedReader(new FileReader("diary.csv"))) {
@@ -41,9 +70,10 @@ public class Diary {
 		 String water = totals[4];
 		 
 		 
-		 return "calories: " + calories + "\ncarbs: " + carbs +" grams"+ "\nfats: " + fats+ " grams" + "\nproteins: " + proteins +" grams"+ "\nwater: " + water + " ounces";
+		 return "calories: " + calories + "\ncarbs: " + carbs +" grams"+ "\nfats: " + fats+ " grams"
+		 + "\nproteins: " + proteins +" grams"+ "\nwater: " + water + " ounces";
 		 
-
+	
 		
 	}
 }
