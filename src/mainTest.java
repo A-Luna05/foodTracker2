@@ -21,9 +21,10 @@ public class mainTest {
 		System.out.println("Diary Test \n");
 
 
-		Diary diaryTest = new Diary(0,0,0,0,0);
-		String totals = diaryTest.getRecord("11/8/2022");
-		diaryTest.checkGoals("11/8/2022");
+		Diary diaryTest = new Diary(170,30,2,8,16);
+		//replace the dates below on lines 26, 27
+		String totals = diaryTest.getRecord("11/11/2022");
+		diaryTest.checkGoals("11/11/2022");
 		System.out.print(totals);
 	}
 }
