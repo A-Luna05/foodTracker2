@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Food {
 
 	public String name;
-	public String brand;
 	public int calories;
 	public int carbs;
 	public int fats;
@@ -16,9 +15,8 @@ public class Food {
 	 * brand an optional variable
 	 */
 
-	public Food(String name, String brand, int calories, int carbs, int fats, int protein) {
+	public Food(String name, int calories, int carbs, int fats, int protein) {
 		this.name = name;
-		this.brand = brand;
 		this.calories = calories;
 		this.carbs = carbs;
 		this.fats = fats;
@@ -27,10 +25,6 @@ public class Food {
 
 	private void updateName(Food food, String updatedName) {
 		food.name = updatedName;
-	}
-
-	private void updateBrand(Food food, String updatedBrand) {
-		food.brand = updatedBrand;
 	}
 
 	private void updateCalories(Food food, int updatedCalories) {

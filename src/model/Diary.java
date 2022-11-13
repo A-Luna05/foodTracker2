@@ -3,14 +3,9 @@ package model;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;  
-import java.time.format.DateTimeFormatter;
-import java.time.*;
 
 public class Diary {
 	Map<String,String[] > entries2;
@@ -33,20 +28,22 @@ public class Diary {
 	}
 	
 	public void checkGoals(String day) {
-		 String[] totals = entries2.get(day);
-		 String[] types = {"calories","carbs", "fats", "proteins", "water"};
-		 
-		 int goalTotals[] = {this.calGoal,this.carbGoal,this.fatGoal,this.proGoal,this.waterGoal};
-		 for(int i = 0; i< 5; i++) {
-			 if(Integer.parseInt(totals[i]) > goalTotals[i]) {
-				 System.out.println("you're above your target for " + types[i] );
-			 } else if(Integer.parseInt(totals[i]) < goalTotals[i]) {
-				 System.out.println("you're under your target for " + types[i]);
-			 }  else {
-				 System.out.println("you're at your target for " + types[i]);
+		try {
+		 	String[] totals = entries2.get(day);
+			String[] types = {"calories","carbs", "fats", "proteins", "water"};	 
+		 	int goalTotals[] = {this.calGoal,this.carbGoal,this.fatGoal,this.proGoal,this.waterGoal};
+		 	for(int i = 0; i< 5; i++) {
+			 	if(Integer.parseInt(totals[i]) > goalTotals[i]) {
+					 System.out.println("You're above your target for " + types[i] + " | " + totals[i] + "/" +goalTotals[i] );
+			 	} else if(Integer.parseInt(totals[i]) < goalTotals[i]) {
+					 System.out.println("You're under your target for " + types[i] + " " + totals[i] + "/" +goalTotals[i]);
+			 	}  else {
+					 System.out.println("You're at your target for " + types[i] + " " + totals[i] + "/" +goalTotals[i]);
 			 }
-			 
 		 }
+		} catch(Exception e) {
+			System.out.println("There is no log for that day.");
+		}
 	}
 	
 	private void readValues() throws IOException {
