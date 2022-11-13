@@ -32,13 +32,14 @@ public class Diary {
 		 	String[] totals = entries2.get(day);
 			String[] types = {"calories","carbs", "fats", "proteins", "water"};	 
 		 	int goalTotals[] = {this.calGoal,this.carbGoal,this.fatGoal,this.proGoal,this.waterGoal};
+			System.out.println("On " + day + " you were:");
 		 	for(int i = 0; i< 5; i++) {
 			 	if(Integer.parseInt(totals[i]) > goalTotals[i]) {
-					 System.out.println("You're above your target for " + types[i] + " | " + totals[i] + "/" +goalTotals[i] );
+					 System.out.println("Above your target for " + types[i] + " | " + totals[i] + "/" +goalTotals[i] );
 			 	} else if(Integer.parseInt(totals[i]) < goalTotals[i]) {
-					 System.out.println("You're under your target for " + types[i] + " " + totals[i] + "/" +goalTotals[i]);
+					 System.out.println("Under your target for " + types[i] + " | " + totals[i] + "/" +goalTotals[i]);
 			 	}  else {
-					 System.out.println("You're at your target for " + types[i] + " " + totals[i] + "/" +goalTotals[i]);
+					 System.out.println("At your target for " + types[i] + " | " + totals[i] + "/" +goalTotals[i]);
 			 }
 		 }
 		} catch(Exception e) {

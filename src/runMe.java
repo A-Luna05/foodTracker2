@@ -5,7 +5,7 @@ import model.Diary;
 import model.DiaryEntry;
 import model.Food;
 
-public class processor {
+public class runMe {
 	
 
 	public static void main(String[] args) throws IOException {
@@ -13,7 +13,22 @@ public class processor {
 		System.out.println("Welcome to the Healthy Eating / Food Tracker \nWhats your name?");
         String name = in.nextLine();
 		System.out.println("Hello " + name);
-		Diary diaryTest = new Diary(170,30,2,8,16);
+		System.out.println("What is your daily calorie goal");
+		int calGoal = in.nextInt();
+		in.nextLine();
+		System.out.println("What is your daily carb goal in grams");
+		int carbGoal = in.nextInt();
+		in.nextLine();
+		System.out.println("What is your daily fat goal in grams");
+		int fatGoal = in.nextInt();
+		in.nextLine();
+		System.out.println("What is your daily protein goal in grams");
+		int proGoal = in.nextInt();
+		in.nextLine();
+		System.out.println("What is your daily water goal in ounces");
+		int waterGoal = in.nextInt();
+		in.nextLine();
+		Diary diaryTest = new Diary(calGoal,carbGoal,fatGoal,proGoal,waterGoal);
 		DiaryEntry testEntry = new DiaryEntry();
 		while (true){
 			System.out.println("What do you want to do?\n1: Log Today's Meals\n2: Get an Overview of a Day\n3: Quit");
