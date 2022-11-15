@@ -22,12 +22,13 @@ public class Diary {
 		this.fatGoal = fatGoal;
 		this.proGoal = proGoal;
 		this.waterGoal = waterGoal;
-		entries2 = new TreeMap<String, String[]>();	
+		entries2 = new TreeMap<String, String[]>();
+		this.readValues();
+		
 	}
 	
 	public void checkGoals(String day) {
 		try {
-			this.readValues();	
 		 	String[] totals = entries2.get(day);
 			String[] types = {"calories","carbs", "fats", "proteins", "water"};	 
 		 	int goalTotals[] = {this.calGoal,this.carbGoal,this.fatGoal,this.proGoal,this.waterGoal};
