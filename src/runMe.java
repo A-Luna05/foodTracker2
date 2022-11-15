@@ -13,23 +13,23 @@ public class runMe {
 		System.out.println("Welcome to the Healthy Eating / Food Tracker \nWhats your name?");
         String name = in.nextLine();
 		System.out.println("Hello " + name);
-		System.out.println("What is your daily calorie goal?");
+		System.out.println("What is your daily calorie goal");
 		int calGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily carb goal in grams?");
+		System.out.println("What is your daily carb goal in grams");
 		int carbGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily fat goal in grams?");
+		System.out.println("What is your daily fat goal in grams");
 		int fatGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily protein goal in grams?");
+		System.out.println("What is your daily protein goal in grams");
 		int proGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily water goal in ounces?");
+		System.out.println("What is your daily water goal in ounces");
 		int waterGoal = in.nextInt();
 		in.nextLine();
-		DiaryEntry testEntry = new DiaryEntry();
 		Diary diaryTest = new Diary(calGoal,carbGoal,fatGoal,proGoal,waterGoal);
+		DiaryEntry testEntry = new DiaryEntry();
 		while (true){
 			System.out.println("What do you want to do?\n1: Log Today's Meals\n2: Get an Overview of a Day\n3: Quit");
 			int choice = in.nextInt();
@@ -45,7 +45,7 @@ public class runMe {
 				System.out.println("Please provide a valid input");
 			}	
 		}
-
+		
 		// testEntry.update(1, new Food("apple", 95, 25, 0, 0));
 		// testEntry.update(2, new Food("bannana", 100, 16, 2, 0));
 		// System.out.println(testEntry.getMeal(1));
