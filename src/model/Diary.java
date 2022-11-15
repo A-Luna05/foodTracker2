@@ -23,12 +23,12 @@ public class Diary {
 		this.proGoal = proGoal;
 		this.waterGoal = waterGoal;
 		entries2 = new TreeMap<String, String[]>();
-		this.readValues();
 		
 	}
 	
 	public void checkGoals(String day) {
 		try {
+			this.readValues();
 		 	String[] totals = entries2.get(day);
 			String[] types = {"calories","carbs", "fats", "proteins", "water"};	 
 		 	int goalTotals[] = {this.calGoal,this.carbGoal,this.fatGoal,this.proGoal,this.waterGoal};
@@ -42,8 +42,9 @@ public class Diary {
 					 System.out.println("At your target for " + types[i] + " | " + totals[i] + "/" +goalTotals[i]);
 			 }
 		 }
+		 	System.out.println("");
 		} catch(Exception e) {
-			System.out.println("There is no log for that day.");
+			System.out.println("There is no log for that day.\n");
 		}
 	}
 	

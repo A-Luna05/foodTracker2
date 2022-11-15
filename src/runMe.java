@@ -13,19 +13,19 @@ public class runMe {
 		System.out.println("Welcome to the Healthy Eating / Food Tracker \nWhats your name?");
         String name = in.nextLine();
 		System.out.println("Hello " + name);
-		System.out.println("What is your daily calorie goal");
+		System.out.println("What is your daily calorie goal?");
 		int calGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily carb goal in grams");
+		System.out.println("What is your daily carb goal in grams?");
 		int carbGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily fat goal in grams");
+		System.out.println("What is your daily fat goal in grams?");
 		int fatGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily protein goal in grams");
+		System.out.println("What is your daily protein goal in grams?");
 		int proGoal = in.nextInt();
 		in.nextLine();
-		System.out.println("What is your daily water goal in ounces");
+		System.out.println("What is your daily water goal in ounces?");
 		int waterGoal = in.nextInt();
 		in.nextLine();
 		Diary diaryTest = new Diary(calGoal,carbGoal,fatGoal,proGoal,waterGoal);
@@ -92,7 +92,7 @@ public class runMe {
 					System.out.println("How many grams of protein did it have?");
 					foodPro = in.nextInt();
 					in.nextLine();
-					entry.update(i, new Food(foodName,foodCal,foodCarb,foodFat,foodPro));
+					entry.update(i + 1, new Food(foodName,foodCal,foodCarb,foodFat,foodPro));
 				}
 			}
 			System.out.println("How many ounces of water did you drink");
@@ -100,7 +100,7 @@ public class runMe {
 			in.nextLine();
 			entry.updateWater(water);
 			entry.write();
-			System.out.println("Meals logged!");
+			System.out.println("Meals logged!\n");
 		}
 
 		private static void getDayOverview(Diary diary, Scanner in){
