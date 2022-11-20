@@ -14,11 +14,16 @@ import java.time.*;
 
 public class Diary {
 	Map<String,String[] > entries2;
+
 	
 	public Diary() throws IOException {
 		
 		entries2 = new TreeMap<String, String[]>();
 		this.readValues();
+	}
+
+	public void checkGoals(){
+		
 	}
 	private void readValues() throws IOException {
 		String line = "";

@@ -25,27 +25,27 @@ public class Food {
 		this.protein = protein;
 	}
 
-	private void updateName(Food food, String updatedName) {
+	public void updateName(Food food, String updatedName) {
 		food.name = updatedName;
 	}
 
-	private void updateBrand(Food food, String updatedBrand) {
+	public void updateBrand(Food food, String updatedBrand) {
 		food.brand = updatedBrand;
 	}
 
-	private void updateCalories(Food food, int updatedCalories) {
+	public void updateCalories(Food food, int updatedCalories) {
 		food.calories = updatedCalories;
 	}
 
-	private void updateCarbs(Food food, int updatedCarbs) {
+	public void updateCarbs(Food food, int updatedCarbs) {
 		food.carbs = updatedCarbs;
 	}
 
-	private void updateFats(Food food, int updatedFats) {
+	public void updateFats(Food food, int updatedFats) {
 		food.fats = updatedFats;
 	}
 
-	private void updateProtein(Food food, int updatedProtein) {
+	public void updateProtein(Food food, int updatedProtein) {
 		food.protein = updatedProtein;
 	}
 }
